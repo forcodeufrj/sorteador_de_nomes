@@ -1,0 +1,109 @@
+
+html,
+body,
+section,
+div,
+h1,
+input,
+button,
+p {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  font-family: monospace;
+  height: 100vh;
+  color: white;
+  background-color: #221d47;
+}
+
+input[type="text"] {
+  border: none;
+  border-radius: 0.2em;
+  font-size: 1.4em;
+  font-family: monospace;
+  font-weight: 700;
+  color: #221d47;
+  display: inline-block;
+  padding: 1em;
+  transition: 0.2s;
+  border: white solid 3px;
+}
+
+#names {
+  width: 83%;
+}
+
+#quant {
+  width: 15%;
+}
+
+h1 {
+  margin-bottom: 2em;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: #5a4bce solid 3px;
+}
+
+button {
+  margin: 0.8em auto 0 auto;
+  border: none;
+  border-radius: 0.2em;
+  display: block;
+  width: 100%;
+  padding: 0.7em;
+  cursor: pointer;
+  font-size: 1.8em;
+  font-family: monospace;
+  background-color: #5a4bce;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  opacity: 1;
+  width: 90%;
+}
+
+.container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  width: 50vw;
+  height: 100%;
+  margin: auto;
+}
+
+.painel {
+  margin: 0 0 5em 0;
+  width: 100%;
+}
+
+.painel img {
+  width: 50%;
+  margin-bottom: 1em;
+}
+
+.painel p {
+  height: 2.6em;
+  font-size: 1.5em;
+  padding: 0.7em;
+  margin: 2em 0;
+}
+
+.info {
+  margin: 0;
+}
+
+.info a {
+  color: #ffff00;
+}
