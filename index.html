@@ -5,8 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sorteador - for_code</title>
+
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="icon" href="https://i.imgur.com/OUdophy.png">
+  <link rel="shortcut icon" href="https://i.imgur.com/OUdophy.png">
+
+  <title>Sorteador - for_code</title>
+
 </head>
 
 <body>
@@ -15,15 +20,17 @@
       <img src="https://i.imgur.com/sUCNjsG.png" alt="Logo da for_code">
       <h1>Sorteador de nomes</h1>
 
-      <input type="text" id="names" value="Aaron, Ana, Davi, João, Hugo">
-      <input type="text" id="quant" value="3">
+      <input type="text" id="names" onfocusout="updateQuantRangeLimits()" value="Aaron, Ana, Davi, João, Hugo">
+      <input type="number" id="quant" onfocusout="verifyQuantInput()" value="3" max="5" min="1">
       <button onclick="btnPress()">Sortear</button>
+
 
       <p id="debug"></p>
 
       <div class="info">
         <br>Instagram: <a href="https://instagram.com/forcodeufrj" target="_blank">@forcodeufrj</a> |
-        Github: <a href="https://github.com/4c0d3" target="_blank">4c0d3</a>
+        Github: <a href="https://github.com/forcodeufrj" target="_blank">forcodeufrj</a> |
+        Versão: <a href="https://github.com/forcodeufrj/sorteador_de_nomes" target="_blank">1.1.0</a>
       </div>
     </section>
   </div>
