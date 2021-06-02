@@ -1,4 +1,8 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+/* as coisas marcadas como !important surgiram da necessidade de sobreescrever "element.style" */
+
 html,
 body,
 section,
@@ -14,40 +18,48 @@ p {
 
 body {
   text-align: center;
-  font-family: monospace;
   height: 100vh;
   color: white;
   background-color: #221d47;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 input[type="text"], input[type="number"] {
   border: none;
   border-radius: 0.2em;
   font-size: 1.4em;
-  font-family: monospace;
   font-weight: 700;
   color: #221d47;
-  display: inline-block;
-  padding: 1em;
   transition: 0.2s;
   border: white solid 3px;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
-#names {
-  width: 78%;
+input[type="text"]{  
+  padding: 1em;
+  width: calc(100% - 82px);    
+  text-align: center;
 }
 
-#quant {
-  width: 20%;
+input[type=number]{
+  padding: 1em 0px 1em 3px;
+  width: 78px;    
+  text-align:center;
 }
 
-h1 {
-  margin-bottom: 2em;
+input[type=number]::-webkit-inner-spin-button {
+  margin-right: 5px;
+  opacity: 1;
 }
 
 input[type="text"]:focus, input[type="number"]:focus {
   outline: none;
   border: #5a4bce solid 3px;
+}
+
+h1 {
+  margin-bottom: 2em;
+  font-weight: 400;
 }
 
 button {
@@ -59,10 +71,10 @@ button {
   padding: 0.7em;
   cursor: pointer;
   font-size: 1.8em;
-  font-family: monospace;
   background-color: #5a4bce;
   color: white;
   transition: 0.2s;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 button:hover {
@@ -80,6 +92,7 @@ button:active {
 
 .container {
   display: grid;
+  grid-template-columns: 100%;
   align-content: center;
   justify-content: center;
   width: 50vw;
@@ -104,10 +117,60 @@ button:active {
   margin: 2em 0;
 }
 
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
 .info {
   margin: 0;
 }
 
 .info a {
   color: #ffff00;
+}
+
+.ui-dialog-titlebar, #dialog{
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.ui-widget-header {
+  background: white !important;
+  border: 1px solid white !important;
+}
+
+.ui-dialog-titlebar {
+  color: #221d47;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 5px !important;
+}
+
+.ui-dialog-content{
+  min-height: auto !important;
+}
+
+#dialog {
+  border: 0px solid #5a4bce;
+  background-color: #5a4bce;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 830px){
+  .flexbox {
+    display: inline-block;
+  }
+  input#quant {    
+    margin-top: 10px;
+  }
+  input#names{
+    width: 100%
+  }
+}
+
+@media (min-width: 909px){
+  .container {
+    width: 454.5px;
+  }
 }

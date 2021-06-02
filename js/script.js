@@ -21,7 +21,14 @@ function verifyQuantInput() {
   convertNamesToArray();
 
   if(parseInt(input_quant.value) > names.length || parseInt(input_quant.value) < 1 || !input_quant.value) {
-    alert(`Valor inválido. Informe um número de 1 a ${names.length}.`);
+    $(function () {
+      $("#dialog").dialog({
+        title: "Erro!"
+      });
+    });
+    $(function () {
+      $("#dialog").text(`Valor inválido. Informe um número entre 1 e ${names.length}`);
+    });
     return true;
   }
 
@@ -58,5 +65,5 @@ function getNames(quant) {
 }
 
 function updateDebug(info) {
-  debug.innerHTML = `> ${info} <`;
+debug.innerHTML = `> ${info} <`;
 }

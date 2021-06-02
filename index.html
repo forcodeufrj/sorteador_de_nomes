@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="icon" href="https://i.imgur.com/OUdophy.png">
   <link rel="shortcut icon" href="https://i.imgur.com/OUdophy.png">
 
   <title>Sorteador - for_code</title>
-
 </head>
 
 <body>
@@ -19,11 +19,12 @@
     <section class="painel">
       <img src="https://i.imgur.com/sUCNjsG.png" alt="Logo da for_code">
       <h1>Sorteador de nomes</h1>
-
-      <input type="text" id="names" onfocusout="updateQuantRangeLimits()" value="Aaron, Ana, Davi, João, Hugo">
-      <input type="number" id="quant" onfocusout="verifyQuantInput()" value="3" max="5" min="1">
+      <div class="flexbox">
+        <input type="text" id="names" onfocusout="updateQuantRangeLimits()" value="Aaron, Ana, Davi, João, Hugo">
+        <input type="number" id="quant" onfocusout="verifyQuantInput()" value="3" max="5" min="1">
+      </div>
+      
       <button onclick="btnPress()">Sortear</button>
-
 
       <p id="debug"></p>
 
@@ -33,9 +34,16 @@
         Versão: <a href="https://github.com/forcodeufrj/sorteador_de_nomes" target="_blank">1.1.0</a>
       </div>
     </section>
-  </div>
 
-  <script src="./js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./js/script.js"></script>
+
+    <div>
+      <p id="dialog"></p>
+    </div>
+  </div> 
+
 </body>
 
 </html>
