@@ -95,7 +95,8 @@ button:active {
   grid-template-columns: 100%;
   align-content: center;
   justify-content: center;
-  width: 50vw;
+  width: 40vw;
+  max-width: 720px;
   height: 100%;
   margin: auto;
 }
@@ -122,6 +123,10 @@ button:active {
   justify-content: space-between;
 }
 
+.flexbox #names {
+  margin-right: 0.5em;
+}
+
 .info {
   margin: 0;
 }
@@ -130,47 +135,79 @@ button:active {
   color: #ffff00;
 }
 
-.ui-dialog-titlebar, #dialog{
-  font-family: "Lexend Deca", sans-serif;
+#message {
+  display: none;
+  visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  transition: 0.2s;
 }
 
-.ui-widget-header {
-  background: white !important;
-  border: 1px solid white !important;
+#message p {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  padding: 0 2em;
 }
 
-.ui-dialog-titlebar {
-  color: #221d47;
-  font-weight: bold;
-  text-align: left;
-  padding-left: 5px !important;
+#message #message-window {
+  width: 40vw;
+  transform: scale(0, 0);
+  padding: 2em;
+  background-color: #221d47;
+  border-radius: 0.2em;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
 }
 
-.ui-dialog-content{
-  min-height: auto !important;
+#message .closer {
+  text-align: right;
+  font-size: 2em;
+  cursor: pointer;
+  margin-right: 0.2em;
+  transition: 0.2s;
+  width: 1em;
+  align-self: flex-end;
 }
 
-#dialog {
-  border: 0px solid #5a4bce;
-  background-color: #5a4bce;
-  color: white;
-  text-align: center;
+#message .closer:hover {
+  color: #5a4bce;
 }
 
-@media (max-width: 830px){
-  .flexbox {
-    display: inline-block;
-  }
-  input#quant {    
-    margin-top: 10px;
-  }
-  input#names{
-    width: 100%
-  }
-}
-
-@media (min-width: 909px){
+@media (max-width: 800px) {
   .container {
-    width: 454.5px;
+    width: 90vw;
+  }
+
+  .flexbox {
+    flex-direction: column;
+  }
+
+  .flexbox #names {
+    width: 100%;
+    margin: 0 0 1em 0;
+  }
+
+  .flexbox #quant {
+    width: 100%;
+  }
+
+  #message #message-window {
+    width: 95vw;
+  }
+
+  #message #message-window p {
+    margin-top: 0.75em;
+    padding: 0;
   }
 }
