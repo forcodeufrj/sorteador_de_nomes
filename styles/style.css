@@ -96,6 +96,7 @@ button:active {
   align-content: center;
   justify-content: center;
   width: 40vw;
+  max-width: 720px;
   height: 100%;
   margin: auto;
 }
@@ -132,33 +133,6 @@ button:active {
 
 .info a {
   color: #ffff00;
-}
-
-.ui-dialog-titlebar, #dialog{
-  font-family: "Lexend Deca", sans-serif;
-}
-
-.ui-widget-header {
-  background: white !important;
-  border: 1px solid white !important;
-}
-
-.ui-dialog-titlebar {
-  color: #221d47;
-  font-weight: bold;
-  text-align: left;
-  padding-left: 5px !important;
-}
-
-.ui-dialog-content{
-  min-height: auto !important;
-}
-
-#dialog {
-  border: 0px solid #5a4bce;
-  background-color: #5a4bce;
-  color: white;
-  text-align: center;
 }
 
 #message {
@@ -210,20 +184,30 @@ button:active {
   color: #5a4bce;
 }
 
-/* @media (max-width: 830px){
+@media (max-width: 800px) {
+  .container {
+    width: 90vw;
+  }
+
   .flexbox {
-    display: inline-block;
+    flex-direction: column;
   }
-  input#quant {    
-    margin-top: 10px;
+
+  .flexbox #names {
+    width: 100%;
+    margin: 0 0 1em 0;
   }
-  input#names{
-    width: 100%
+
+  .flexbox #quant {
+    width: 100%;
+  }
+
+  #message #message-window {
+    width: 95vw;
+  }
+
+  #message #message-window p {
+    margin-top: 0.75em;
+    padding: 0;
   }
 }
-
-@media (min-width: 909px){
-  .container {
-    width: 454.5px;
-  }
-} */
