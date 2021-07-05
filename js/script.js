@@ -52,7 +52,7 @@ function updateQuantRangeLimits() {
 
 function convertNamesToArray() {
   names_string = input_names.value;
-  names = names_string.replace(/ /g, "").split(',');
+  names = names_string.trim().split(',');
 }
 
 function getNames(quant) {
