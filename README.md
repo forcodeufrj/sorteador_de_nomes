@@ -31,7 +31,7 @@
 - Os textos estão com a fonte oficial da for_code.
 
 #### Correção
-- Nome com espaço é juntado: Quando o usuário escrevIA um nome composto (ou qualquer um que tenha espaço) o sorteador mostraVA ele juntado, sem o espaço.
+- Nomes com espaços eram juntados: quando o usuário escrevia um nome composto (ou qualquer um que tinha espaço) no resultado ele aparecia juntado, sem os espaços.
 
 ### Versões anteriores
 <details>
